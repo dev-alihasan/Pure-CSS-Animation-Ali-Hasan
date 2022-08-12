@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>dailer</title>
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+        body {
+          background: black;
+        }
+
+        .fa {
+          color: azure;
+          font-size: 2rem;
+        }
+
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+
+        .dailer {
+          background: #326abd;
+          height: 80px;
+          width: 80px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+
+        .dailer::after {
+          content: "";
+          position: absolute;
+          width: calc(100% + 40px);
+          height: calc(100% + 40px);
+          border: 2px solid #ffff;
+          border-radius: 50%;
+          animation: animate 1.5s linear infinite;
+          animation-delay: 0.8s;
+        }
+
+        @keyframes animate {
+          0% {
+            transform: scale(0.5);
+            opacity: 0;
+          }
+          50% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          100% {
+            transform: scale(1.4);
+            opacity: 0;
+          }
+        }
+    </style>
+  </head>
+  <body>
+          <div class="container">
+            <div class="dailer">
+              <i class="fa fa-phone"> </i>
+            </div>
+          </div>
+  </body>
+</html>
